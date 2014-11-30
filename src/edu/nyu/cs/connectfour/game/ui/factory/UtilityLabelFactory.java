@@ -6,6 +6,7 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
 import edu.nyu.cs.connectfour.game.ui.label.ResultLabel;
 import edu.nyu.cs.connectfour.game.ui.label.TimerLabel;
 import edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType;
+import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**
  * @author shenli
@@ -31,7 +32,7 @@ public class UtilityLabelFactory {
      * @throws IllegalArgumentException if utility label type does not exist
      */
     public static GetContainerable<JLabel> getLabel(UtilityLabelType type) {
-        assert type != null;
+        ParameterChecker.nullCheck(type, "utility label type");
         
         switch (type) {
             case RESULT: return ResultLabel.INSTANCE;

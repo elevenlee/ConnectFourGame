@@ -7,6 +7,7 @@ import edu.nyu.cs.connectfour.game.ui.dialog.AboutDialog;
 import edu.nyu.cs.connectfour.game.ui.dialog.HelpDialog;
 import edu.nyu.cs.connectfour.game.ui.dialog.PreferenceDialog;
 import edu.nyu.cs.connectfour.game.ui.type.DialogType;
+import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**
  * @author shenli
@@ -32,7 +33,7 @@ public class DialogFactory {
      * @throws IllegalArgumentException if dialog type does not exist
      */
     public static GetContainerable<JDialog> getDialog(DialogType type) {
-        assert type != null;
+        ParameterChecker.nullCheck(type, "dialog type");
         
         switch (type) {
             case PREFERENCE: return PreferenceDialog.INSTANCE;
