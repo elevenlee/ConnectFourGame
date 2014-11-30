@@ -24,6 +24,8 @@ import javax.swing.border.TitledBorder;
 
 import edu.nyu.cs.connectfour.container.GetContainerable;
 import edu.nyu.cs.connectfour.game.subject.impl.GameUtility;
+import edu.nyu.cs.connectfour.game.ui.label.ResultLabel;
+import edu.nyu.cs.connectfour.game.ui.panel.ChessPanel;
 import edu.nyu.cs.connectfour.game.utils.ComputerLevel;
 import edu.nyu.cs.connectfour.game.utils.GameMode;
 import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
@@ -193,8 +195,8 @@ public enum PreferenceDialog implements GetContainerable<JDialog> {
                             playerColorButtons.get(i).getBackground());
                 }
                 GameUtility.INSTANCE.setGameStatus(false, false);
-                // TODO add chess panel resigning operation
-                // TODO add result label clearing operation
+                ChessPanel.INSTANCE.resignChessPanel();
+                ResultLabel.INSTANCE.getContainer().setText("");
                 preferenceDialog.dispose();
             }
         });
