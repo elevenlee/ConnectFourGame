@@ -6,8 +6,11 @@ import java.awt.Color;
 import java.util.Arrays;
 import java.util.List;
 
+import org.easymock.EasyMock;
 import org.junit.Before;
 import org.junit.Test;
+
+import edu.nyu.cs.connectfour.player.observer.PlayerInfoObserver;
 
 public class PlayerInfoTest {
     private List<PlayerInfo> playerList;
@@ -91,6 +94,91 @@ public class PlayerInfoTest {
             playerList.get(i).setAll(expectedNames.get(i), expectedColors.get(i));
             assertEquals(expectedNames.get(i), playerList.get(i).getName());
             assertEquals(expectedColors.get(i), playerList.get(i).getColor());
+        }
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo#registerPlayerInfoObserver(edu.nyu.cs.connectfour.player.observer.PlayerInfoObserver)}.
+     */
+    @Test(expected = NullPointerException.class)
+    public void testRegisterPlayerInfoObserverWithNullValue() {
+        for (PlayerInfo pi : playerList) {
+            pi.registerPlayerInfoObserver(null);
+        }
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo#registerPlayerInfoObserver(edu.nyu.cs.connectfour.player.observer.PlayerInfoObserver)}.
+     */
+    @Test
+    public void testRegisterPlayerInfoObserverWithNoNullValue() {
+        for (PlayerInfo pi : playerList) {
+            PlayerInfoObserver mockPlayerInfoObserver = EasyMock.createMock(PlayerInfoObserver.class);
+            pi.registerPlayerInfoObserver(mockPlayerInfoObserver);
+            mockPlayerInfoObserver.updatePlayerInfo(pi, "Lee", Color.BLUE);
+            EasyMock.replay(mockPlayerInfoObserver);
+            pi.setAll("Lee", Color.BLUE);
+            EasyMock.verify(mockPlayerInfoObserver);
+            pi.removePlayerInfoObserver(mockPlayerInfoObserver);
+        }
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo#removePlayerInfoObserver(edu.nyu.cs.connectfour.player.observer.PlayerInfoObserver)}.
+     */
+    @Test
+    public void testRemovePlayerInfoObserverWithNullValue() {
+        for (PlayerInfo pi : playerList) {
+            pi.removePlayerInfoObserver(null);
+        }
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo#removePlayerInfoObserver(edu.nyu.cs.connectfour.player.observer.PlayerInfoObserver)}.
+     */
+    @Test
+    public void testRemovePlayerInfoObserverWithNotExistValue() {
+        for (PlayerInfo pi : playerList) {
+            PlayerInfoObserver mockPlayerInfoObserver = EasyMock.createMock(PlayerInfoObserver.class);
+            PlayerInfoObserver mockPlayerInfoObserverDeleted = EasyMock.createMock(PlayerInfoObserver.class);
+            pi.registerPlayerInfoObserver(mockPlayerInfoObserver);
+            pi.removePlayerInfoObserver(mockPlayerInfoObserverDeleted);
+            mockPlayerInfoObserver.updatePlayerInfo(pi, "Lee", Color.GREEN);
+            EasyMock.replay(mockPlayerInfoObserver);
+            pi.setAll("Lee", Color.GREEN);
+            EasyMock.verify(mockPlayerInfoObserver);
+            pi.removePlayerInfoObserver(mockPlayerInfoObserver);
+        }
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo#removePlayerInfoObserver(edu.nyu.cs.connectfour.player.observer.PlayerInfoObserver)}.
+     */
+    @Test
+    public void testRemovePlayerInfoObserverWithExistValue() {
+        for (PlayerInfo pi : playerList) {
+            PlayerInfoObserver mockPlayerInfoObserver = EasyMock.createMock(PlayerInfoObserver.class);
+            pi.registerPlayerInfoObserver(mockPlayerInfoObserver);
+            pi.removePlayerInfoObserver(mockPlayerInfoObserver);
+            EasyMock.replay(mockPlayerInfoObserver);
+            pi.setAll("Lee", Color.GREEN);
+            EasyMock.verify(mockPlayerInfoObserver);
+        }
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo#notifyPlayerInfoObservers()}.
+     */
+    @Test
+    public void testNotifyPlayerInfoObservers() {
+        for (PlayerInfo pi : playerList) {
+            PlayerInfoObserver mockPlayerInfoObserver = EasyMock.createMock(PlayerInfoObserver.class);
+            pi.registerPlayerInfoObserver(mockPlayerInfoObserver);
+            mockPlayerInfoObserver.updatePlayerInfo(pi, "Lee", Color.ORANGE);
+            EasyMock.replay(mockPlayerInfoObserver);
+            pi.setAll("Lee", Color.ORANGE);
+            EasyMock.verify(mockPlayerInfoObserver);
+            pi.removePlayerInfoObserver(mockPlayerInfoObserver);
         }
     }
 

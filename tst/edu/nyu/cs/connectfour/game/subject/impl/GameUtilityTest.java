@@ -2,9 +2,11 @@ package edu.nyu.cs.connectfour.game.subject.impl;
 
 import static org.junit.Assert.*;
 
+import org.easymock.EasyMock;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.nyu.cs.connectfour.game.observer.GameStatusObserver;
 import edu.nyu.cs.connectfour.game.utils.ComputerLevel;
 import edu.nyu.cs.connectfour.game.utils.GameMode;
 import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
@@ -159,6 +161,62 @@ public class GameUtilityTest {
                 assertEquals(b2, gameUtility.isGameOver());
             }
         }
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameUtility#registerGameStatusObserver(edu.nyu.cs.connectfour.game.observer.GameStatusObserver)}.
+     */
+    @Test(expected = NullPointerException.class)
+    public void testRegisterGameStatusObserverWithNullValue() {
+        gameUtility.registerGameStatusObserver(null);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameUtility#removeGameStatusObserver(edu.nyu.cs.connectfour.game.observer.GameStatusObserver)}.
+     */
+    @Test
+    public void testRemoveGameStatusObserverWithNullValue() {
+        gameUtility.removeGameStatusObserver(null);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameUtility#removeGameStatusObserver(edu.nyu.cs.connectfour.game.observer.GameStatusObserver)}.
+     */
+    @Test
+    public void testRemoveGameStatusObserverWithExistValue() {
+        GameStatusObserver mockGameStatusObserver = EasyMock.createMock(GameStatusObserver.class);
+        gameUtility.registerGameStatusObserver(mockGameStatusObserver);
+        gameUtility.removeGameStatusObserver(mockGameStatusObserver);
+        EasyMock.replay(mockGameStatusObserver);
+        gameUtility.setGameStatus(true, false);
+        EasyMock.verify(mockGameStatusObserver);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameUtility#notifyGameStatusObservers()}.
+     */
+    @Test
+    public void testNotifyGameStatusObservers() {
+        GameStatusObserver mockGameStatusObserver = EasyMock.createMock(GameStatusObserver.class);
+        gameUtility.registerGameStatusObserver(mockGameStatusObserver);
+        
+        mockGameStatusObserver.updateGameModeAndLevel(GameMode.HUMAN_VS_COMPUTER, ComputerLevel.REGULAR);
+        mockGameStatusObserver.updateGameTurn(PlayerInfo.PLAYER_ONE);
+        mockGameStatusObserver.updateGameStatus(true, false);
+        
+        mockGameStatusObserver.updateGameModeAndLevel(GameMode.HUMAN_VS_COMPUTER, ComputerLevel.REGULAR);
+        mockGameStatusObserver.updateGameTurn(PlayerInfo.PLAYER_TWO);
+        mockGameStatusObserver.updateGameStatus(true, false);
+        
+        mockGameStatusObserver.updateGameModeAndLevel(GameMode.HUMAN_VS_HUMAN, ComputerLevel.ABNORMAL);
+        mockGameStatusObserver.updateGameTurn(PlayerInfo.PLAYER_TWO);
+        mockGameStatusObserver.updateGameStatus(true, false);
+        
+        EasyMock.replay(mockGameStatusObserver);
+        gameUtility.setGameStatus(true, false);
+        gameUtility.setPlayerTurn(PlayerInfo.PLAYER_TWO);
+        gameUtility.setGameModeAndLevel(GameMode.HUMAN_VS_HUMAN, ComputerLevel.ABNORMAL);
+        EasyMock.verify(mockGameStatusObserver);
     }
 
     /**

@@ -2,11 +2,18 @@ package edu.nyu.cs.connectfour.game.subject.impl;
 
 import static org.junit.Assert.*;
 
+import org.easymock.EasyMock;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.nyu.cs.connectfour.game.observer.GameRecordObserver;
+import edu.nyu.cs.connectfour.game.observer.GameResultObserver;
+import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
+
 public class GameRecordTest {
     private GameRecord gameRecord;
+    private GameRecordObserver mockGameRecordObserver;
+    private GameResultObserver mockGameResultObserver;
     
     /**
      * @throws java.lang.Exception
@@ -14,6 +21,8 @@ public class GameRecordTest {
     @Before
     public void setUp() throws Exception {
         gameRecord = new GameRecord(6, 7);
+        mockGameRecordObserver = EasyMock.createMock(GameRecordObserver.class);
+        mockGameResultObserver = EasyMock.createMock(GameResultObserver.class);
     }
 
     /**
@@ -73,6 +82,100 @@ public class GameRecordTest {
     @Test
     public void testNextPlay() {
         gameRecord.nextPlay();
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#registerGameRecordObserver(edu.nyu.cs.connectfour.game.observer.GameRecordObserver)}.
+     */
+    @Test(expected = NullPointerException.class)
+    public void testRegisterGameRecordObserverWithNullValue() {
+        gameRecord.registerGameRecordObserver(null);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#registerGameRecordObserver(edu.nyu.cs.connectfour.game.observer.GameRecordObserver)}.
+     */
+    @Test
+    public void testRegisterGameRecordObserverWithNoNullValue() {
+        gameRecord.registerGameRecordObserver(mockGameRecordObserver);
+        mockGameRecordObserver.updateGameRecord(PlayerInfo.PLAYER_ONE, 5, 3);
+        EasyMock.replay(mockGameRecordObserver);
+        gameRecord.place(3);
+        EasyMock.verify(mockGameRecordObserver);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#removeGameRecordObserver(edu.nyu.cs.connectfour.game.observer.GameRecordObserver)}.
+     */
+    @Test
+    public void testRemoveGameRecordObserverWithNullValue() {
+        gameRecord.removeGameRecordObserver(null);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#removeGameRecordObserver(edu.nyu.cs.connectfour.game.observer.GameRecordObserver)}.
+     */
+    @Test
+    public void testRemoveGameRecordObserverWithNotExistValue() {
+        GameRecordObserver mockGameRecordObserverDeleted = EasyMock.createMock(GameRecordObserver.class);
+        gameRecord.registerGameRecordObserver(mockGameRecordObserver);
+        gameRecord.removeGameRecordObserver(mockGameRecordObserverDeleted);
+        mockGameRecordObserver.updateGameRecord(PlayerInfo.PLAYER_ONE, 5, 3);
+        EasyMock.replay(mockGameRecordObserver);
+        gameRecord.place(3);
+        EasyMock.verify(mockGameRecordObserver);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#removeGameRecordObserver(edu.nyu.cs.connectfour.game.observer.GameRecordObserver)}.
+     */
+    @Test
+    public void testRemoveGameRecordObserverWithExistValue() {
+        gameRecord.registerGameRecordObserver(mockGameRecordObserver);
+        gameRecord.removeGameRecordObserver(mockGameRecordObserver);
+        EasyMock.replay(mockGameRecordObserver);
+        gameRecord.place(3);
+        EasyMock.verify(mockGameRecordObserver);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#notifyGameRecordObservers(int)}.
+     */
+    @Test
+    public void testNotifyGameRecordObservers() {
+        gameRecord.registerGameRecordObserver(mockGameRecordObserver);
+        mockGameRecordObserver.updateGameRecord(PlayerInfo.PLAYER_ONE, 5, 3);
+        EasyMock.replay(mockGameRecordObserver);
+        gameRecord.place(3);
+        EasyMock.verify(mockGameRecordObserver);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#registerGameResultObserver(edu.nyu.cs.connectfour.game.observer.GameResultObserver)}.
+     */
+    @Test(expected = NullPointerException.class)
+    public void testRegisterGameResultObserverWithNullValue() {
+        gameRecord.registerGameResultObserver(null);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#removeGameResultObserver(edu.nyu.cs.connectfour.game.observer.GameResultObserver)}.
+     */
+    @Test
+    public void testRemoveGameResultObserverWithNullValue() {
+        gameRecord.removeGameResultObserver(null);
+    }
+    
+    /**
+     * Test method for {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord#removeGameResultObserver(edu.nyu.cs.connectfour.game.observer.GameResultObserver)}.
+     */
+    @Test
+    public void testRemoveGameResultObserverWithNoNullValue() {
+        gameRecord.registerGameResultObserver(mockGameResultObserver);
+        gameRecord.removeGameResultObserver(mockGameResultObserver);
+        EasyMock.replay(mockGameResultObserver);
+        gameRecord.place(5);
+        EasyMock.verify(mockGameResultObserver);
     }
     
     /**
