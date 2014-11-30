@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.label;
+package edu.nyu.cs.connectfour.ui.label;
 
 import java.awt.Dimension;
 
@@ -9,7 +9,7 @@ import javax.swing.SwingConstants;
 import edu.nyu.cs.connectfour.container.GetContainerable;
 import edu.nyu.cs.connectfour.game.observer.GameResultObserver;
 import edu.nyu.cs.connectfour.game.subject.GameResultSubject;
-import edu.nyu.cs.connectfour.game.ui.panel.ChessPanel;
+import edu.nyu.cs.connectfour.ui.panel.ChessPanel;
 import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**
@@ -18,7 +18,7 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * A {@code ResultLabel} object is used to create an "Result" label.
  * <p>
  * The singleton {@code ResultLabel} object contains a {@link javax.swing.JLabel} component. {@code ResultLabel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.game.ui.factory.UtilityLabelFactory#getLabel(edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.UtilityLabelFactory#getLabel(edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType)} 
  * factory methods. These will return the singleton {@code ResultLabel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.factory;
+package edu.nyu.cs.connectfour.ui.factory;
 
 import java.util.Collections;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.swing.JButton;
 
-import edu.nyu.cs.connectfour.game.ui.chess.ChessButton;
+import edu.nyu.cs.connectfour.ui.chess.ChessButton;
 
 /**
  * @author shenli

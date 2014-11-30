@@ -1,14 +1,14 @@
-package edu.nyu.cs.connectfour.game.ui.factory;
+package edu.nyu.cs.connectfour.ui.factory;
 
 import javax.swing.JPanel;
 
 import edu.nyu.cs.connectfour.container.GetContainerable;
-import edu.nyu.cs.connectfour.game.ui.panel.ChessPanel;
-import edu.nyu.cs.connectfour.game.ui.panel.ControlPanel;
-import edu.nyu.cs.connectfour.game.ui.panel.EmptyPanel;
-import edu.nyu.cs.connectfour.game.ui.panel.PlayerPanel;
-import edu.nyu.cs.connectfour.game.ui.panel.UtilityPanel;
-import edu.nyu.cs.connectfour.game.ui.type.PanelType;
+import edu.nyu.cs.connectfour.ui.panel.ChessPanel;
+import edu.nyu.cs.connectfour.ui.panel.ControlPanel;
+import edu.nyu.cs.connectfour.ui.panel.EmptyPanel;
+import edu.nyu.cs.connectfour.ui.panel.PlayerPanel;
+import edu.nyu.cs.connectfour.ui.panel.UtilityPanel;
+import edu.nyu.cs.connectfour.ui.type.PanelType;
 import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**

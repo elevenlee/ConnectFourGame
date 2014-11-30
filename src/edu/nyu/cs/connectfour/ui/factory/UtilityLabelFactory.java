@@ -1,11 +1,11 @@
-package edu.nyu.cs.connectfour.game.ui.factory;
+package edu.nyu.cs.connectfour.ui.factory;
 
 import javax.swing.JLabel;
 
 import edu.nyu.cs.connectfour.container.GetContainerable;
-import edu.nyu.cs.connectfour.game.ui.label.ResultLabel;
-import edu.nyu.cs.connectfour.game.ui.label.TimerLabel;
-import edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType;
+import edu.nyu.cs.connectfour.ui.label.ResultLabel;
+import edu.nyu.cs.connectfour.ui.label.TimerLabel;
+import edu.nyu.cs.connectfour.ui.type.UtilityLabelType;
 import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**

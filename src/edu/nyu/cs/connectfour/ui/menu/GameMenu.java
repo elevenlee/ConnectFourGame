@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.menu;
+package edu.nyu.cs.connectfour.ui.menu;
 
 import java.awt.event.KeyEvent;
 
@@ -15,7 +15,7 @@ import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
 /**
  * @author shenli
  * <p>
- * The {@code GameMenu} enum used to provide menus for singleton {@link edu.nyu.cs.connectfour.game.ui.menu.GameMenuBar} object.
+ * The {@code GameMenu} enum used to provide menus for singleton {@link edu.nyu.cs.connectfour.ui.menu.GameMenuBar} object.
  */
 enum GameMenu implements GetContainerable<JMenu>, GameStatusObserver {
     GAME("Game", KeyEvent.VK_G),

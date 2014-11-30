@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.menu;
+package edu.nyu.cs.connectfour.ui.menu;
 
 import java.util.Collections;
 import java.util.EnumMap;

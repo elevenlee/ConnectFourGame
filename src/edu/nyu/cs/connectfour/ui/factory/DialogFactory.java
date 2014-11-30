@@ -1,12 +1,12 @@
-package edu.nyu.cs.connectfour.game.ui.factory;
+package edu.nyu.cs.connectfour.ui.factory;
 
 import javax.swing.JDialog;
 
 import edu.nyu.cs.connectfour.container.GetContainerable;
-import edu.nyu.cs.connectfour.game.ui.dialog.AboutDialog;
-import edu.nyu.cs.connectfour.game.ui.dialog.HelpDialog;
-import edu.nyu.cs.connectfour.game.ui.dialog.PreferenceDialog;
-import edu.nyu.cs.connectfour.game.ui.type.DialogType;
+import edu.nyu.cs.connectfour.ui.dialog.AboutDialog;
+import edu.nyu.cs.connectfour.ui.dialog.HelpDialog;
+import edu.nyu.cs.connectfour.ui.dialog.PreferenceDialog;
+import edu.nyu.cs.connectfour.ui.type.DialogType;
 import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**

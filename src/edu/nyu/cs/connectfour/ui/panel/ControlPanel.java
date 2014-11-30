@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.panel;
+package edu.nyu.cs.connectfour.ui.panel;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -14,12 +14,12 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
 import edu.nyu.cs.connectfour.game.observer.GameStatusObserver;
 import edu.nyu.cs.connectfour.game.subject.GameStatusSubject;
 import edu.nyu.cs.connectfour.game.subject.impl.GameUtility;
-import edu.nyu.cs.connectfour.game.ui.factory.DialogFactory;
-import edu.nyu.cs.connectfour.game.ui.label.ResultLabel;
-import edu.nyu.cs.connectfour.game.ui.type.DialogType;
 import edu.nyu.cs.connectfour.game.utils.ComputerLevel;
 import edu.nyu.cs.connectfour.game.utils.GameMode;
 import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
+import edu.nyu.cs.connectfour.ui.factory.DialogFactory;
+import edu.nyu.cs.connectfour.ui.label.ResultLabel;
+import edu.nyu.cs.connectfour.ui.type.DialogType;
 
 /**
  * @author shenli
@@ -27,7 +27,7 @@ import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
  * A {@code ContorlPanel} object is used to create an "Control" panel.
  * <p>
  * The singleton {@code ContorlPanel} object contains a {@link javax.swing.JPanel} component. {@code ContorlPanel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.game.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.game.ui.type.PanelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.ui.type.PanelType)} 
  * factory methods. These will return the singleton {@code ContorlPanel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.dialog;
+package edu.nyu.cs.connectfour.ui.dialog;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -19,7 +19,7 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * A {@code HelpDialog} object is used to create an "Help dialog" window.
  * <p>
  * The singleton {@code HelpDialog} object contains a {@link javax.swing.JDialog} component. {@code HelpDialog}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.game.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.game.ui.type.DialogType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.game.ui.type.DialogType)} 
  * factory methods. These will return the singleton {@code HelpDialog}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

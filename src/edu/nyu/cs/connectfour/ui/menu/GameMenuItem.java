@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.menu;
+package edu.nyu.cs.connectfour.ui.menu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,10 +9,10 @@ import javax.swing.JOptionPane;
 
 import edu.nyu.cs.connectfour.container.GetContainerable;
 import edu.nyu.cs.connectfour.game.subject.impl.GameUtility;
-import edu.nyu.cs.connectfour.game.ui.factory.DialogFactory;
-import edu.nyu.cs.connectfour.game.ui.label.ResultLabel;
-import edu.nyu.cs.connectfour.game.ui.panel.ChessPanel;
-import edu.nyu.cs.connectfour.game.ui.type.DialogType;
+import edu.nyu.cs.connectfour.ui.factory.DialogFactory;
+import edu.nyu.cs.connectfour.ui.label.ResultLabel;
+import edu.nyu.cs.connectfour.ui.panel.ChessPanel;
+import edu.nyu.cs.connectfour.ui.type.DialogType;
 
 /**
  * @author shenli

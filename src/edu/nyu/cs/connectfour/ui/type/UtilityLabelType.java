@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.type;
+package edu.nyu.cs.connectfour.ui.type;
 
 /**
  * @author shenli

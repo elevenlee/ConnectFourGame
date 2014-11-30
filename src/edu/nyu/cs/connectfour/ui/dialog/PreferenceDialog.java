@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.dialog;
+package edu.nyu.cs.connectfour.ui.dialog;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -24,11 +24,11 @@ import javax.swing.border.TitledBorder;
 
 import edu.nyu.cs.connectfour.container.GetContainerable;
 import edu.nyu.cs.connectfour.game.subject.impl.GameUtility;
-import edu.nyu.cs.connectfour.game.ui.label.ResultLabel;
-import edu.nyu.cs.connectfour.game.ui.panel.ChessPanel;
 import edu.nyu.cs.connectfour.game.utils.ComputerLevel;
 import edu.nyu.cs.connectfour.game.utils.GameMode;
 import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
+import edu.nyu.cs.connectfour.ui.label.ResultLabel;
+import edu.nyu.cs.connectfour.ui.panel.ChessPanel;
 
 /**
  * @author shenli
@@ -36,7 +36,7 @@ import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
  * A {@code PreferenceDialog} object is used to create an "Preference dialog" window.
  * <p>
  * The singleton {@code PreferenceDialog} object contains a {@link javax.swing.JDialog} component. 
- * {@code PreferenceDialog} object may be obtains by calls on {@link edu.nyu.cs.connectfour.game.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.game.ui.type.DialogType)} 
+ * {@code PreferenceDialog} object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.game.ui.type.DialogType)} 
  * factory methods. These will return the singleton {@code PreferenceDialog}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

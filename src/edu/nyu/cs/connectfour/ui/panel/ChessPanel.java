@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.panel;
+package edu.nyu.cs.connectfour.ui.panel;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -18,11 +18,11 @@ import edu.nyu.cs.connectfour.game.subject.GameResultSubject;
 import edu.nyu.cs.connectfour.game.subject.GameStatusSubject;
 import edu.nyu.cs.connectfour.game.subject.impl.GameRecord;
 import edu.nyu.cs.connectfour.game.subject.impl.GameUtility;
-import edu.nyu.cs.connectfour.game.ui.factory.ChessButtonFactory;
-import edu.nyu.cs.connectfour.game.ui.label.ResultLabel;
 import edu.nyu.cs.connectfour.game.utils.ComputerLevel;
 import edu.nyu.cs.connectfour.game.utils.GameMode;
 import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
+import edu.nyu.cs.connectfour.ui.factory.ChessButtonFactory;
+import edu.nyu.cs.connectfour.ui.label.ResultLabel;
 import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**
@@ -31,7 +31,7 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * A {@code ChessPanel} object is used to create an "Chess Map" panel.
  * <p>
  * The singleton {@code ChessPanel} object contains a {@link javax.swing.JPanel} component. {@code ChessPanel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.game.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.game.ui.type.PanelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.game.ui.type.PanelType)} 
  * factory methods. These will return the singleton {@code ChessPanel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

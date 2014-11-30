@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.chess;
+package edu.nyu.cs.connectfour.ui.chess;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -15,7 +15,7 @@ import javax.swing.JButton;
  * <p>
  * Chess Buttons can be configured, and to some degree controlled, by Actions. Using an Action with a button 
  * has many benefits beyond directly configuring a button. {@code ChessButton} object may be obtains by calls 
- * on {@link edu.nyu.cs.connectfour.game.ui.factory.ChessButtonFactory#getChessButton()} factory methods. 
+ * on {@link edu.nyu.cs.connectfour.ui.factory.ChessButtonFactory#getChessButton()} factory methods. 
  * These will create a chess button.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

@@ -1,4 +1,4 @@
-package edu.nyu.cs.connectfour.game.ui.panel;
+package edu.nyu.cs.connectfour.ui.panel;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -6,8 +6,8 @@ import java.awt.FlowLayout;
 import javax.swing.JPanel;
 
 import edu.nyu.cs.connectfour.container.GetContainerable;
-import edu.nyu.cs.connectfour.game.ui.factory.UtilityLabelFactory;
-import edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType;
+import edu.nyu.cs.connectfour.ui.factory.UtilityLabelFactory;
+import edu.nyu.cs.connectfour.ui.type.UtilityLabelType;
 
 /**
  * @author shenli
@@ -15,7 +15,7 @@ import edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType;
  * An {@code UtilityPanel} object is used to create an "Utility information" panel.
  * <p>
  * The singleton {@code UtilityPanel} object contains a {@link javax.swing.JPanel} component. {@code UtilityPanel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.game.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.game.ui.type.PanelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.ui.type.PanelType)} 
  * factory methods. These will return the singleton {@code UtilityPanel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.
