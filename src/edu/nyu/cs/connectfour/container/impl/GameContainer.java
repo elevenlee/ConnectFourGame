@@ -35,10 +35,6 @@ public class GameContainer implements GetContainerable<JFrame> {
      * @param height the height of this component in pixels
      */
     public GameContainer(String id, int width, int height) {
-        assert id != null && !id.equals("");
-        assert width > 0;
-        assert height > 0;
-        
         this.id = id;
         this.frame = new JFrame();
         this.frame.setTitle(TITLE + " @ " + id);
