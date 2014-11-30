@@ -9,7 +9,7 @@ package edu.nyu.cs.connectfour.game.ai;
  * The {@code ComputerThinking} object is not thread-safe. To use it concurrently, user must surround each 
  * method invocation with external synchronization of the users' choosing.
  */
-class ComputerThinking {
+public class ComputerThinking {
 	private final int rows;
 	private final int columns;
 	private final int[] nextPlace;
@@ -26,7 +26,7 @@ class ComputerThinking {
 	 * @param nextPlace the next chess place location on each column
 	 * @param state the chess map state
 	 */
-	ComputerThinking(int rows, int columns, int[] nextPlace, int[][] state) {
+	public ComputerThinking(int rows, int columns, int[] nextPlace, int[][] state) {
 		assert rows > 0;
 		assert columns > 0;
 		assert nextPlace != null;
@@ -47,7 +47,7 @@ class ComputerThinking {
 	 * @param player the player index
 	 * @return true if player is win, otherwise false
 	 */
-	boolean isWin(int row, int column, int player) {
+	public boolean isWin(int row, int column, int player) {
 		assert row >= 0;
 		assert column >= 0;
 		assert player >= 0;
@@ -67,7 +67,7 @@ class ComputerThinking {
 	 * @param chessNumber the chess number
 	 * @return true if two players are drawing, otherwise false
 	 */
-	boolean isDraw(int chessNumber) {
+	public boolean isDraw(int chessNumber) {
 		assert chessNumber >= 0;
 		
 		return rows * columns == chessNumber;
@@ -80,7 +80,7 @@ class ComputerThinking {
 	 * @param player the player index
 	 * @return the best location
 	 */
-	int bestValue(int degree, int player) {
+	public int bestValue(int degree, int player) {
 		int bestValue;
 		if (degree == 1) {
 			int[] maxValues = new int[columns];

@@ -203,14 +203,6 @@ public class ComputerThinkingTest {
 		ComputerThinking ct5 = new ComputerThinking(row, column, next, state2);
 		assertFalse(computerThink.equals(ct5));
 	}
-
-	/**
-	 * Test method for {@link edu.nyu.cs.connectfour.game.ai.ComputerThinking#hashCode()}.
-	 */
-	@Test
-	public void testHashCode() {
-		assertEquals(1843286000, computerThink.hashCode());
-	}
 	
 	/**
 	 * Test method for {@link edu.nyu.cs.connectfour.game.ai.ComputerThinking#toString()}.

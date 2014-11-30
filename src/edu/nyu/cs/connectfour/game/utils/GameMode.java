@@ -18,7 +18,7 @@ import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
  * {@code GameMode} objects are immutable they could be shared.
  */
 public enum GameMode {
-    HUAMN_VS_COMPUTER("against computer", LabelAndIcon.ME, LabelAndIcon.COMPUTER),
+    HUMAN_VS_COMPUTER("against computer", LabelAndIcon.ME, LabelAndIcon.COMPUTER),
     HUMAN_VS_HUMAN("against human", LabelAndIcon.PLAYERONE, LabelAndIcon.PLAYERTWO);
     
     private final String description;

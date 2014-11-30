@@ -21,6 +21,7 @@ public enum PlayerInfo implements PlayerInfoSubject {
     PLAYER_TWO("Computer", Color.YELLOW);
 
     private static final String SEPARATOR = "/";
+    
     private final List<PlayerInfoObserver> observers;
     private String name;
     private Color color;
