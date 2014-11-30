@@ -93,7 +93,7 @@ public enum ChessPanel implements GetContainerable<JPanel>, GameStatusObserver, 
      * <p>
      * @return {@link edu.nyu.cs.connectfour.game.subject.impl.GameRecord} object
      */
-    public synchronized GameRecord getPlayRecord() {
+    public synchronized GameRecord getGameRecord() {
         return (GameRecord) gameRecord;
     }
     

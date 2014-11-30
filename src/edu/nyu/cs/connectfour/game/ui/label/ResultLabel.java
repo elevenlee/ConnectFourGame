@@ -9,6 +9,7 @@ import javax.swing.SwingConstants;
 import edu.nyu.cs.connectfour.container.GetContainerable;
 import edu.nyu.cs.connectfour.game.observer.GameResultObserver;
 import edu.nyu.cs.connectfour.game.subject.GameResultSubject;
+import edu.nyu.cs.connectfour.game.ui.panel.ChessPanel;
 import edu.nyu.cs.connectfour.utils.ParameterChecker;
 
 /**
@@ -47,7 +48,7 @@ public enum ResultLabel implements GetContainerable<JLabel>, GameResultObserver 
                                 this.iconPath, "Util Symbol"),SwingConstants.LEADING);
         this.label.setPreferredSize(new Dimension(150, 100));
         this.label.setToolTipText(this.tooltipText);
-        // TODO add registering chess panel player record operation
+        setGameResultSubject(ChessPanel.INSTANCE.getGameRecord());
     }
 
     /**

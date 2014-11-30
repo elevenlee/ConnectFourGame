@@ -55,7 +55,7 @@ public enum ControlPanel implements GetContainerable<JPanel>, GameStatusObserver
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         GameUtility.INSTANCE.setGameStatus(true, false);
-                        ChessPanel.INSTANCE.getPlayRecord().nextPlay();
+                        ChessPanel.INSTANCE.getGameRecord().nextPlay();
                     }
                 });
             }
