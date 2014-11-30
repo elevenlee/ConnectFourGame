@@ -26,26 +26,26 @@ import edu.nyu.cs.connectfour.player.observer.PlayerInfoObserver;
  * When an {@code PlayerInfoSubject} object is newly created, its set of observers is empty.
  */
 public interface PlayerInfoSubject {
-	
-	/**
-	 * Adds an observer to the set of observers for this object. The order in which notifications will be 
-	 * delivered to multiple observers is not specified.
-	 * <p>
-	 * @param o an observer to be added.
-	 */
-	public void registerPlayerInfoObserver(PlayerInfoObserver o);
-	
-	/**
-	 * Deletes an observer from the set of observers of this object. Passing null to this method will have no 
-	 * effect. 
-	 * <p>
-	 * @param o the observer to be deleted.
-	 */
-	public void removePlayerInfoObserver(PlayerInfoObserver o);
-	
-	/**
-	 * If this object has changed, then notify all of its observers. 
-	 */
-	public void notifyPlayerInfoObservers();
-	
+    
+    /**
+     * Adds an observer to the set of observers for this object. The order in which notifications will be 
+     * delivered to multiple observers is not specified.
+     * <p>
+     * @param o an observer to be added.
+     */
+    public void registerPlayerInfoObserver(PlayerInfoObserver o);
+    
+    /**
+     * Deletes an observer from the set of observers of this object. Passing null to this method will have no 
+     * effect. 
+     * <p>
+     * @param o the observer to be deleted.
+     */
+    public void removePlayerInfoObserver(PlayerInfoObserver o);
+    
+    /**
+     * If this object has changed, then notify all of its observers. 
+     */
+    public void notifyPlayerInfoObservers();
+    
 }

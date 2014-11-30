@@ -26,28 +26,28 @@ import edu.nyu.cs.connectfour.game.observer.GameResultObserver;
  * When an {@code GameResultSubject} object is newly created, its set of observers is empty.
  */
 public interface GameResultSubject {
-	
-	/**
-	 * Adds an observer to the set of observers for this object. The order in which notifications will be 
-	 * delivered to multiple observers is not specified.
-	 * <p>
-	 * @param o an observer to be added
-	 */
-	public void registerGameResultObserver(GameResultObserver o);
-	
-	/**
-	 * Deletes an observer from the set of observers of this object. Passing null to this method will have no 
-	 * effect. 
-	 * <p>
-	 * @param o the observer to be deleted.
-	 */
-	public void removeGameResultObserver(GameResultObserver o);
-	
-	/**
-	 * If this object has changed, then notify all of its observers.
-	 * <p>
-	 * @param text the text
-	 */
-	public void notifyGameResultObservers(String text);
-	
+    
+    /**
+     * Adds an observer to the set of observers for this object. The order in which notifications will be 
+     * delivered to multiple observers is not specified.
+     * <p>
+     * @param o an observer to be added
+     */
+    public void registerGameResultObserver(GameResultObserver o);
+    
+    /**
+     * Deletes an observer from the set of observers of this object. Passing null to this method will have no 
+     * effect. 
+     * <p>
+     * @param o the observer to be deleted.
+     */
+    public void removeGameResultObserver(GameResultObserver o);
+    
+    /**
+     * If this object has changed, then notify all of its observers.
+     * <p>
+     * @param text the text
+     */
+    public void notifyGameResultObservers(String text);
+    
 }
