@@ -1,6 +1,7 @@
 package edu.nyu.cs.connectfour.ui;
 
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  * @author shenli
@@ -17,12 +18,8 @@ public enum UIStyle {
     CROSS("cross") {
         
         @Override
-        void setLook() {
-            try {
-                UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }   
+        void setLook() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
         }
         
     },
@@ -32,12 +29,8 @@ public enum UIStyle {
     SYSTEM("system") {
         
         @Override
-        void setLook() {
-            try {
-                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        void setLook() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }
         
     },
@@ -47,12 +40,8 @@ public enum UIStyle {
     MOTIF("motif") {
         
         @Override
-        void setLook() {
-            try {
-                UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        void setLook() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         }
         
     };
@@ -81,8 +70,13 @@ public enum UIStyle {
     }
     
     /**
-     * Set the Swing look and feel component
+     * Set the Swing look and feel component.
+     * <p>
+     * @throws ClassNotFoundException if the {@link javax.swing.LookAndFeel} class could not be found
+     * @throws InstantiationException if a new instance of the class couldn't be created
+     * @throws IllegalAccessException if the class or initializer isn't accessible
+     * @throws UnsupportedLookAndFeelException if {@code lnf.isSupportedLookAndFeel()} is false
      */
-    abstract void setLook();
+    abstract void setLook() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException;
     
 }
