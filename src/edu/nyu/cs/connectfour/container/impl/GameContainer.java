@@ -16,7 +16,8 @@ import edu.nyu.cs.connectfour.ui.type.PanelType;
  * A {@code GameContainer} object is used to create an "Game" main window.
  * <p>
  * The {@code GameContainer} object contains a {@link javax.swing.JFrame} component. {@code GameContainer} 
- * object may be obtains by calls on FrameFactory.getGame factory methods. These will return the {@code GameContainer} object.
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.container.factory.GameContainerFactory#getGameContainer(java.lang.String, int, int)} 
+ * factory methods. These will return the {@code GameContainer} object.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.
  */
