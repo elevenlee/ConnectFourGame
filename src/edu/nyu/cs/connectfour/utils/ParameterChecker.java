@@ -32,6 +32,7 @@ public class ParameterChecker {
      * Check object whether is {@code null}. If the object is {@code null}, {@code NullPointerException} would
      * be thrown.
      * <p>
+     * @param <T> specified object type
      * @param arg the specified object to be check
      * @param name the variable name
      * @throws NullPointerException if parameter arg is {@code null}

@@ -30,7 +30,7 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * An {@code PlayerPanel} object is used to create an "Player information" panel.
  * <p>
  * The singleton {@code PlayerPanel} object contains a {@link javax.swing.JPanel} component. {@code PlayerPanel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.game.ui.type.PanelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.ui.type.PanelType)} 
  * factory methods. These will return the singleton {@code PlayerPanel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

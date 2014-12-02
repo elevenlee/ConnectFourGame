@@ -14,7 +14,7 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * A {@code TimerLabel} object is used to create an "Timer" label.
  * <p>
  * The singleton {@code TimerLabel} object contains a {@link javax.swing.JLabel} component. {@code TimerLabel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.UtilityLabelFactory#getLabel(edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.UtilityLabelFactory#getLabel(edu.nyu.cs.connectfour.ui.type.UtilityLabelType)} 
  * factory methods. These will return the singleton {@code TimerLabel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

@@ -18,7 +18,7 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * A {@code ResultLabel} object is used to create an "Result" label.
  * <p>
  * The singleton {@code ResultLabel} object contains a {@link javax.swing.JLabel} component. {@code ResultLabel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.UtilityLabelFactory#getLabel(edu.nyu.cs.connectfour.game.ui.type.UtilityLabelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.UtilityLabelFactory#getLabel(edu.nyu.cs.connectfour.ui.type.UtilityLabelType)} 
  * factory methods. These will return the singleton {@code ResultLabel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

@@ -12,7 +12,7 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * An {@code EmptyPanel} object is used to create an "Empty" panel.
  * <p>
  * The singleton {@code EmptyPanel} object contains a {@link javax.swing.JPanel} component. {@code EmptyPanel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.game.ui.type.PanelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.ui.type.PanelType)} 
  * factory methods. These will return the singleton {@code EmptyPanel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

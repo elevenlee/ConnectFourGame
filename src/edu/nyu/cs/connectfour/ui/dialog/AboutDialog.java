@@ -19,7 +19,7 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * An {@code AboutDialog} object is used to create an "About dialog" window.
  * <p>
  * The singleton {@code AboutDialog} object contains a {@link javax.swing.JDialog} component. {@code AboutDialog}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.game.ui.type.DialogType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.ui.type.DialogType)} 
  * factory methods. These will return the singleton {@code AboutDialog}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

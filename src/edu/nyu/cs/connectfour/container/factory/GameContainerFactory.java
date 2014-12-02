@@ -53,12 +53,12 @@ public class GameContainerFactory {
     }
     
     /**
-     * Returns an unmodifiable view of the {@link edu.nyu.cs.connectfour.container.GetContainerable<JFrame>} list. 
+     * Returns an unmodifiable view of the {@link edu.nyu.cs.connectfour.container.GetContainerable} list. 
      * This method allows modules to provide users with "read-only" access to internal lists. Query operations 
      * on the returned list "read through" to the specified list, and attempts to modify the returned list, 
      * whether direct or via its iterator, result in an {@code UnsupportedOperationException}.
      * <p>
-     * @return an unmodifiable view of the specified list. If no {@link edu.nyu.cs.connectfour.container.GetContainerable<JFrame>}
+     * @return an unmodifiable view of the specified list. If no {@link edu.nyu.cs.connectfour.container.GetContainerable}
      * have been created, returns an empty list
      */
     public static List<GetContainerable<JFrame>> getGames() {

@@ -31,7 +31,7 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * A {@code ChessPanel} object is used to create an "Chess Map" panel.
  * <p>
  * The singleton {@code ChessPanel} object contains a {@link javax.swing.JPanel} component. {@code ChessPanel}
- * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.game.ui.type.PanelType)} 
+ * object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.PanelFactory#getPanel(edu.nyu.cs.connectfour.ui.type.PanelType)} 
  * factory methods. These will return the singleton {@code ChessPanel}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.

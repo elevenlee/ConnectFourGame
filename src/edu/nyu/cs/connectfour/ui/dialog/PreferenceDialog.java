@@ -36,7 +36,7 @@ import edu.nyu.cs.connectfour.ui.panel.ChessPanel;
  * A {@code PreferenceDialog} object is used to create an "Preference dialog" window.
  * <p>
  * The singleton {@code PreferenceDialog} object contains a {@link javax.swing.JDialog} component. 
- * {@code PreferenceDialog} object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.game.ui.type.DialogType)} 
+ * {@code PreferenceDialog} object may be obtains by calls on {@link edu.nyu.cs.connectfour.ui.factory.DialogFactory#getDialog(edu.nyu.cs.connectfour.ui.type.DialogType)} 
  * factory methods. These will return the singleton {@code PreferenceDialog}.
  * <p>
  * <b>Warning:</b> Swing is not thread safe.
