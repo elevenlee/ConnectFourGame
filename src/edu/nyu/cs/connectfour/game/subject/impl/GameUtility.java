@@ -27,8 +27,6 @@ public enum GameUtility implements GameStatusSubject {
     private static final String SEPARATOR = "/";
     
     private final List<GameStatusObserver> gameStatusObservers = new CopyOnWriteArrayList<>();
-    private final Object playingLock = new Object();
-    private final Object gameOverLock = new Object();
     private GameMode mode = GameMode.HUMAN_VS_COMPUTER;
     private ComputerLevel level = ComputerLevel.REGULAR;
     private PlayerInfo offensive = PlayerInfo.PLAYER_ONE;
@@ -36,13 +34,20 @@ public enum GameUtility implements GameStatusSubject {
     private boolean playing = false;
     private boolean gameOver = true;
     
+    private final Object modeLock = new Object();
+    private final Object levelLock = new Object();
+    private final Object offensiveLock = new Object();
+    private final Object turnLock = new Object();
+    private final Object playingLock = new Object();
+    private final Object gameOverLock = new Object();
+    
     /**
      * Returns game mode.
      * <p>
      * @return game mode
      */
     public GameMode getGameMode() {
-        synchronized(mode) {
+        synchronized(modeLock) {
             return mode;
         }
     }
@@ -53,7 +58,7 @@ public enum GameUtility implements GameStatusSubject {
      * @return computer level
      */
     public ComputerLevel getComputerLevel() {
-        synchronized(level) {
+        synchronized(levelLock) {
             return level;
         }
     }
@@ -64,7 +69,7 @@ public enum GameUtility implements GameStatusSubject {
      * @return offensive player
      */
     public PlayerInfo getOffensive() {
-        synchronized(offensive) {
+        synchronized(offensiveLock) {
             return offensive;
         }
     }
@@ -75,7 +80,7 @@ public enum GameUtility implements GameStatusSubject {
      * @return which player is turn
      */
     public PlayerInfo getPlayerTurn() {
-        synchronized(turn) {
+        synchronized(turnLock) {
             return turn;
         }
     }
@@ -112,10 +117,10 @@ public enum GameUtility implements GameStatusSubject {
         ParameterChecker.nullCheck(mode, "game mode");
         ParameterChecker.nullCheck(level, "computer level");
         
-        synchronized(this.mode) {
+        synchronized(modeLock) {
             this.mode = mode;
         }
-        synchronized(this.level) {
+        synchronized(levelLock) {
             this.level = level;
         }
         notifyGameStatusObservers();
@@ -129,10 +134,10 @@ public enum GameUtility implements GameStatusSubject {
     public void setOffensive(PlayerInfo offensive) {
         ParameterChecker.nullCheck(offensive, "offensive player");
         
-        synchronized(this.offensive) {
+        synchronized(offensiveLock) {
             this.offensive = offensive;
         }
-        synchronized(this.turn) {
+        synchronized(turnLock) {
             this.turn = offensive;
         }
         notifyGameStatusObservers();
@@ -146,7 +151,7 @@ public enum GameUtility implements GameStatusSubject {
     public void setPlayerTurn(PlayerInfo turn) {
         ParameterChecker.nullCheck(turn, "player turn");
         
-        synchronized (this.turn) {
+        synchronized (turnLock) {
             this.turn = turn;
         }
         notifyGameStatusObservers();
@@ -212,19 +217,19 @@ public enum GameUtility implements GameStatusSubject {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         GameMode pm = null;
-        synchronized (mode) {
+        synchronized (modeLock) {
             pm = mode;
         }
         sb.append(pm);
         sb.append(SEPARATOR);
         ComputerLevel cl = null;
-        synchronized (level) {
+        synchronized (levelLock) {
             cl = level;
         }
         sb.append(cl);
         sb.append(SEPARATOR);
         PlayerInfo pi = null;
-        synchronized (offensive) {
+        synchronized (offensiveLock) {
             pi = offensive;
         }
         sb.append(pi);

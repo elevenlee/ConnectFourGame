@@ -1,5 +1,6 @@
 package edu.nyu.cs.connectfour.game.subject.impl;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -256,8 +257,8 @@ public class GameRecord implements GameRecordSubject, GameResultSubject, GameSta
         hashCode = hashCode * prime + rows;
         hashCode = hashCode * prime + columns;
         hashCode = hashCode * prime + chessNumber;
-        hashCode = hashCode * prime + nextPlace.hashCode();
-        hashCode = hashCode * prime + state.hashCode();
+        hashCode = hashCode * prime + Arrays.hashCode(nextPlace);
+        hashCode = hashCode * prime + Arrays.hashCode(state);
         hashCode = hashCode * prime + mode.hashCode();
         hashCode = hashCode * prime + level.hashCode();
         hashCode = hashCode * prime + turn.hashCode();

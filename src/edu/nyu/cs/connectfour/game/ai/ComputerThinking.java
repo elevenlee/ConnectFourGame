@@ -1,5 +1,7 @@
 package edu.nyu.cs.connectfour.game.ai;
 
+import java.util.Arrays;
+
 /**
  * @author shenli
  * <p>
@@ -421,7 +423,7 @@ public class ComputerThinking {
                         trace[i] = MaxMin;
                     }
                     return MaxMin;
-                } else if (depth % 2 == 1 && isWin(nextPlace[i], i, (player + 1) % 2)) {
+                } else if (((depth & 1) == 1) && isWin(nextPlace[i], i, (player + 1) % 2)) {
                     MaxMin = -20000000 * depth;
                     if (depth == maxDepth * 2) {
                         trace[i] = MaxMin;
@@ -572,8 +574,8 @@ public class ComputerThinking {
         int hashCode = 17;
         hashCode = hashCode * prime + rows;
         hashCode = hashCode * prime + columns;
-        hashCode = hashCode * prime + nextPlace.hashCode();
-        hashCode = hashCode * prime + state.hashCode();
+        hashCode = hashCode * prime + Arrays.hashCode(nextPlace);
+        hashCode = hashCode * prime + Arrays.hashCode(state);
         hashCode = hashCode * prime + maxDepth;
         return hashCode;
     }
