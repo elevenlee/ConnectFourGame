@@ -9,7 +9,26 @@ package edu.nyu.cs.connectfour.game.utils;
  * {@code ComputerLevel} objects are immutable they could be shared.
  */
 public enum ComputerLevel {
-    BEGINNER(0), AMATEUR(1), REGULAR(2), PROFESSION(3), ABNORMAL(4);
+    /**
+     * Beginner level
+     */
+    BEGINNER(0), 
+    /**
+     * Amateur level
+     */
+    AMATEUR(1), 
+    /**
+     * Regular level
+     */
+    REGULAR(2), 
+    /**
+     * Profession level
+     */
+    PROFESSION(3), 
+    /**
+     * Abnormal level
+     */
+    ABNORMAL(4);
     
     private final int degree;
     

@@ -25,6 +25,9 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum HelpDialog implements GetContainerable<JDialog> {
+    /**
+     * The singleton instance presents help dialog swing.
+     */
     INSTANCE("Help", 510, 450);
     
     private static final String ICON_PATH = "res/connectfour.png";

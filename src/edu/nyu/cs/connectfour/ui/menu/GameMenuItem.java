@@ -21,6 +21,9 @@ import edu.nyu.cs.connectfour.ui.type.DialogType;
  * {@link java.awt.event.ActionListener} interface for each menu item.
  */
 enum GameMenuItem implements GetContainerable<JMenuItem> {
+    /**
+     * Start game
+     */
     START(GameMenu.GAME, "Start", KeyEvent.VK_S) {
         
         @Override
@@ -35,6 +38,9 @@ enum GameMenuItem implements GetContainerable<JMenuItem> {
             });
         }
     },
+    /**
+     * Pause game
+     */
     PAUSE(GameMenu.GAME, "Pause", KeyEvent.VK_U) {
         
         @Override
@@ -48,6 +54,9 @@ enum GameMenuItem implements GetContainerable<JMenuItem> {
             });
         }
     },
+    /**
+     * Resign game
+     */
     RESIGN(GameMenu.GAME, "Resign", KeyEvent.VK_R) {
         
         @Override
@@ -72,6 +81,9 @@ enum GameMenuItem implements GetContainerable<JMenuItem> {
             });
         }
     },
+    /**
+     * Open preference dialog
+     */
     PREFERENCE(GameMenu.GAME, "Preference", KeyEvent.VK_P) {
         
         @Override
@@ -86,6 +98,9 @@ enum GameMenuItem implements GetContainerable<JMenuItem> {
             });
         }
     },
+    /**
+     * Quit game
+     */
     QUIT(GameMenu.GAME, "Quit", KeyEvent.VK_Q) {
         
         @Override
@@ -106,6 +121,9 @@ enum GameMenuItem implements GetContainerable<JMenuItem> {
             });
         }
     },
+    /**
+     * Open help dialog
+     */
     VIEW_HELP(GameMenu.HELP, "View Help", KeyEvent.VK_V) {
         
         @Override
@@ -120,6 +138,9 @@ enum GameMenuItem implements GetContainerable<JMenuItem> {
             });
         }
     },
+    /**
+     * Open about dialog
+     */
     ABOUT(GameMenu.HELP, "About", KeyEvent.VK_A) {
         
         @Override

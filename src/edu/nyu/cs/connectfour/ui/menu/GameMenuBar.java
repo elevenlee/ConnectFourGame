@@ -22,6 +22,9 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum GameMenuBar implements GetContainerable<JMenuBar> {
+    /**
+     * The singleton instance presents menu bar.
+     */
     INSTANCE;
     
     private final JMenuBar menuBar;

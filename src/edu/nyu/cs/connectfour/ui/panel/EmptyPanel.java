@@ -18,6 +18,9 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum EmptyPanel implements GetContainerable<JPanel> {
+    /**
+     * The singleton instance presents empty panel swing.
+     */
     INSTANCE(20, 800);
 
     private final JPanel emptyPanel;

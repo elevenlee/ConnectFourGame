@@ -37,6 +37,9 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum ChessPanel implements GetContainerable<JPanel>, GameStatusObserver, GameRecordObserver {
+    /**
+     * The singleton instance presents chess panel swing.
+     */
     INSTANCE(6, 7);
 
     private final GameStatusSubject gameStatus;

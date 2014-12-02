@@ -18,7 +18,13 @@ import edu.nyu.cs.connectfour.player.subject.impl.PlayerInfo;
  * The {@code GameMenu} enum used to provide menus for singleton {@link edu.nyu.cs.connectfour.ui.menu.GameMenuBar} object.
  */
 enum GameMenu implements GetContainerable<JMenu>, GameStatusObserver {
+    /**
+     * Game menu
+     */
     GAME("Game", KeyEvent.VK_G),
+    /**
+     * Help menu
+     */
     HELP("Help", KeyEvent.VK_H);
     
     private final GameStatusSubject gameStatus;

@@ -6,5 +6,12 @@ package edu.nyu.cs.connectfour.ui.type;
  * The {@code UtilityLabelType} object contains enum values of utility label type.
  */
 public enum UtilityLabelType {
-    TIMER, RESULT;
+    /**
+     * Timer label
+     */
+    TIMER, 
+    /**
+     * Result label
+     */
+    RESULT;
 }

@@ -21,6 +21,9 @@ import edu.nyu.cs.connectfour.ui.type.UtilityLabelType;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum UtilityPanel implements GetContainerable<JPanel> {
+    /**
+     * The singleton instance presents utility panel swing.
+     */
     INSTANCE(200, 800);
 
     private final JPanel utilPanel;

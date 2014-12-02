@@ -17,7 +17,13 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * NOTE: the {@code PlayerInfo} object is thread-safe.
  */
 public enum PlayerInfo implements PlayerInfoSubject {
+    /**
+     * The first player, default name "Me" with default red color.
+     */
     PLAYER_ONE("Me", Color.RED),
+    /**
+     * Player two, default name "Computer" with default yellow color.
+     */
     PLAYER_TWO("Computer", Color.YELLOW);
 
     private static final String SEPARATOR = "/";

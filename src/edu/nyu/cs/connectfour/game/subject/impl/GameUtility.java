@@ -19,6 +19,9 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * The singleton {@code GameUtility} object is thread-safe.
  */
 public enum GameUtility implements GameStatusSubject {
+    /**
+     * The singleton instance contains all the game status information
+     */
     INSTANCE;
     
     private static final String SEPARATOR = "/";

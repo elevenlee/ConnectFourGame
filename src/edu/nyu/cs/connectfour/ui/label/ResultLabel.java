@@ -24,6 +24,9 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum ResultLabel implements GetContainerable<JLabel>, GameResultObserver {
+    /**
+     * The singleton instance presents result label.
+     */
     INSTANCE("res/result.png", "Show result");
     
     private final JLabel label;

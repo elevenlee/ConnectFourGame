@@ -11,6 +11,9 @@ import javax.swing.UIManager;
  * objects are immutable they can be shared.
  */
 public enum UIStyle {
+    /**
+     * The default cross platform look and feel -- the Java Look and Feel (JLF)
+     */
     CROSS("cross") {
         
         @Override
@@ -23,6 +26,9 @@ public enum UIStyle {
         }
         
     },
+    /**
+     * The native system look and feel.
+     */
     SYSTEM("system") {
         
         @Override
@@ -35,6 +41,9 @@ public enum UIStyle {
         }
         
     },
+    /**
+     * The swing motif look and feel.
+     */
     MOTIF("motif") {
         
         @Override

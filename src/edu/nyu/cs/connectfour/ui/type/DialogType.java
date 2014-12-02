@@ -6,5 +6,16 @@ package edu.nyu.cs.connectfour.ui.type;
  * The {@code DialogType} object contains enum values of dialog type.
  */
 public enum DialogType {
-    PREFERENCE, HELP, ABOUT;
+    /**
+     * Preference dialog
+     */
+    PREFERENCE, 
+    /**
+     * Help dialog
+     */
+    HELP, 
+    /**
+     * About dialog
+     */
+    ABOUT;
 }

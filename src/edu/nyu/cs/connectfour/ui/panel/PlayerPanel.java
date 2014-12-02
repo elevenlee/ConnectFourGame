@@ -36,6 +36,9 @@ import edu.nyu.cs.connectfour.utils.ParameterChecker;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum PlayerPanel implements GetContainerable<JPanel>, PlayerInfoObserver, GameStatusObserver {
+    /**
+     * The singleton instance presents player panel swing.
+     */
     INSTANCE(800, 80);
 
     private static final String VS_ICON_PATH = "res/vs.png";

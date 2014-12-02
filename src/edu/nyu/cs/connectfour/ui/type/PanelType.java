@@ -6,5 +6,24 @@ package edu.nyu.cs.connectfour.ui.type;
  * The {@code PanelType} object contains enum values of panel type.
  */
 public enum PanelType {
-    CHESS, PLAYER, CONTROL, UTILITY, EMPTY;
+    /**
+     * Chess panel
+     */
+    CHESS, 
+    /**
+     * Player panel
+     */
+    PLAYER, 
+    /**
+     * Control panel
+     */
+    CONTROL, 
+    /**
+     * Utility panel
+     */
+    UTILITY, 
+    /**
+     * Empty panel
+     */
+    EMPTY;
 }

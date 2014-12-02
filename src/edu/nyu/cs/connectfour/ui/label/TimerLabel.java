@@ -20,6 +20,9 @@ import edu.nyu.cs.connectfour.container.GetContainerable;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum TimerLabel implements GetContainerable<JLabel> {
+    /**
+     * The singleton instance presents timer label.
+     */
     INSTANCE("res/clock.png", "Timer");
     
     private final JLabel label;

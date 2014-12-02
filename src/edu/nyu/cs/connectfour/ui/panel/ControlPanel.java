@@ -33,6 +33,9 @@ import edu.nyu.cs.connectfour.ui.type.DialogType;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum ControlPanel implements GetContainerable<JPanel>, GameStatusObserver {
+    /**
+     * The singleton instance presents control panel swing.
+     */
     INSTANCE(800, 120);
 
     private final GameStatusSubject gameStatus;

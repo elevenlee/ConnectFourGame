@@ -42,6 +42,9 @@ import edu.nyu.cs.connectfour.ui.panel.ChessPanel;
  * <b>Warning:</b> Swing is not thread safe.
  */
 public enum PreferenceDialog implements GetContainerable<JDialog> {
+    /**
+     * The singleton instance presents preference dialog swing.
+     */
     INSTANCE("Preference", 480, 420);
     
     private final JDialog preferenceDialog;
