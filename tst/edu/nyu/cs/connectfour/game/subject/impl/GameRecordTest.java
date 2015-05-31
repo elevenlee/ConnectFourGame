@@ -30,8 +30,7 @@ public class GameRecordTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void testGameRecordWithTwoNegativeValues() {
-        @SuppressWarnings("unused")
-        GameRecord gr = new GameRecord(-6, -8);
+        new GameRecord(-6, -8);
     }
     
     /**
@@ -39,8 +38,7 @@ public class GameRecordTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void testGameRecordWithOneNegativeValue() {
-        @SuppressWarnings("unused")
-        GameRecord gr = new GameRecord(-6, 8);
+        new GameRecord(-6, 8);
     }
     
     /**
@@ -48,8 +46,7 @@ public class GameRecordTest {
      */
     @Test
     public void testGameRecordWithPositiveValue() {
-        @SuppressWarnings("unused")
-        GameRecord gr = new GameRecord(6, 8);
+        new GameRecord(6, 8);
     }
 
     /**

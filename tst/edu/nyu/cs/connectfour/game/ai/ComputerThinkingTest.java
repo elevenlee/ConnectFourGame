@@ -31,8 +31,7 @@ public class ComputerThinkingTest {
      */
     @Test
     public void testComputerThinkingWithAllIllegalValues() {
-        @SuppressWarnings("unused")
-        ComputerThinking ct = new ComputerThinking(-3, -5, null, null);
+        new ComputerThinking(-3, -5, null, null);
     }
     
     /**
@@ -40,8 +39,7 @@ public class ComputerThinkingTest {
      */
     @Test
     public void testComputerThinkingWithTwoNegativeValues() {
-        @SuppressWarnings("unused")
-        ComputerThinking ct = new ComputerThinking(-3, -5, new int[4], new int[5][9]);
+        new ComputerThinking(-3, -5, new int[4], new int[5][9]);
     }
     
     /**
@@ -49,8 +47,7 @@ public class ComputerThinkingTest {
      */
     @Test
     public void testComputerThinkingWithOneNegativeValue() {
-        @SuppressWarnings("unused")
-        ComputerThinking ct = new ComputerThinking(-3, 5, new int[4], new int[5][9]);
+        new ComputerThinking(-3, 5, new int[4], new int[5][9]);
     }
     
     /**
@@ -58,8 +55,7 @@ public class ComputerThinkingTest {
      */
     @Test
     public void testComputerThinkingWithTwoNullValues() {
-        @SuppressWarnings("unused")
-        ComputerThinking ct = new ComputerThinking(5, 9, null, null);
+        new ComputerThinking(5, 9, null, null);
     }
     
     /**
@@ -67,8 +63,7 @@ public class ComputerThinkingTest {
      */
     @Test
     public void testComputerThinkingWithOneNullValue() {
-        @SuppressWarnings("unused")
-        ComputerThinking ct = new ComputerThinking(5, 9, new int[9], null);
+        new ComputerThinking(5, 9, new int[9], null);
     }
     
     /**
@@ -76,8 +71,7 @@ public class ComputerThinkingTest {
      */
     @Test
     public void testComputerThinkingWithAllLegalValues() {
-        @SuppressWarnings("unused")
-        ComputerThinking ct = new ComputerThinking(5, 9, new int[9], new int[5][1]);
+        new ComputerThinking(5, 9, new int[9], new int[5][1]);
     }
 
     /**
